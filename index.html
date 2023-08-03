@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>leon</title>
+
+		<!-- normalize Style -->
+		<link rel="stylesheet" href="css/normalize.css" />
+
+		<!-- bootstrap link -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<!-- main style sheet -->
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap"
+			rel="stylesheet" />
+		<!-- aos Animations -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/0dea3f5238.js"
+			crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="leon-app">
+			<!-- Start Nav -->
+			<nav class="navbar navbar-expand-lg bg-white py-3 fixed-top shadow">
+				<div class="container">
+					<a class="navbar-brand" href="#">
+						<img src="assets/images/logo.png" alt="logo" height="24" />
+					</a>
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div
+						class="collapse navbar-collapse"
+						id="navbarSupportedContent">
+						<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#"
+									>Home</a
+								>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#">Services</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#">Portfolio</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#">About</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End Nav -->
+
+			<!-- Start Header -->
+			<header>
+				<div class="header text-center py-5">
+					<h1>Hello There</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+				</div>
+			</header>
+			<!-- end Header -->
+
+			<!-- Start works -->
+			<section id="works">
+				<div class="container py-4">
+					<div class="row p-5">
+						<div
+							v-for="work in  works"
+							data-aos="fade-down"
+							class="work col-12 col-md-6 col-lg-4 text-center px-4 my-lg-0 my-4">
+							<img :src="work.iconImg" alt="work1" />
+							<h5 class="fw-bold my-4">{{ work.title }}</h5>
+							<p>{{ work.description }}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End works -->
+
+			<!-- Start Services -->
+			<section id="services">
+				<div class="container py-4">
+					<h2 class="title">Services</h2>
+					<p>Don't be busy, be productive</p>
+
+					<div class="row py-5">
+						<div class="col-12 col-lg-8 row">
+							<div
+								data-aos="fade-up-right"
+								v-for="service in services"
+								class="col-12 col-sm-6 d-flex">
+								<img
+									:src="service.iconImg"
+									alt=""
+									class="align-self-start m-3" />
+								<div class="text">
+									<h4>{{ service.title }}</h4>
+									<p>{{ service.description }}</p>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-4 d-none d-lg-flex align-items-center justify-content-end">
+							<div class="img-with-frame1">
+								<img
+									data-aos="zoom-in-left"
+									src="assets/images/services-img.jpg"
+									alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Services -->
+
+			<!-- Start portfolio -->
+			<section id="portfolio">
+				<div class="container py-4">
+					<h2 class="title">Portfolio</h2>
+					<p>Don't be busy, be productive</p>
+					<div class="row py-5">
+						<div
+							v-for="project in  projects "
+							data-aos="fade-up"
+							class="col-12 col-md-6 col-lg-4 px-4 my-lg-0 my-4">
+							<div class="card">
+								<img :src="project.img" class="card-img-top" alt=" " />
+								<div class="card-body">
+									<h5 class="card-title">{{ project.title }}</h5>
+									<p class="card-text">{{ project.description }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End portfolio -->
+
+			<!-- Start About -->
+			<div id="about">
+				<div class="container py-4">
+					<h2 class="title">About</h2>
+					<p>Less is more work</p>
+					<div class="row justify-content-center py-5">
+						<div class="col-6 d-none d-lg-flex align-items-center">
+							<div class="img">
+								<img src="assets/images/about-img.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-10 col-lg-6">
+							<h3>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua. Ut enima ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliqui
+							</h3>
+							<hr class="my-4" />
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliqu
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End About -->
+
+			<!-- Start contact -->
+			<div id="contact">
+				<div class="container text-center py-4">
+					<h2 class="title">Contact</h2>
+					<p class="mb-5">we are born to create</p>
+
+					<h4 class="mt-4">Feel free to drop us a line at:</h4>
+					<h5>leonagency@mail.com</h5>
+					<div
+						class="social d-flex justify-content-center align-items-center">
+						<p class="align-items-center m-0">
+							Find Us On Social Networks
+						</p>
+						<ul class="list-unstyled d-flex my-4">
+							<li class="ps-4">
+								<i class="fa-brands fa-square-facebook"></i>
+							</li>
+							<li class="ps-4">
+								<i class="fa-brands fa-twitter"></i>
+							</li>
+							<li class="ps-4">
+								<i class="fa-brands fa-instagram"></i>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- End contact -->
+
+			<!-- Start footer -->
+			<footer class="text-center py-4">
+				<p class="mb-0">© 2021 <span>Leon</span> All Right Reserved</p>
+			</footer>
+			<!-- end footer -->
+		</div>
+
+		<!-- bootstrap script  -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Vue Script -->
+		<script src="js/vue.js"></script>
+
+		<!-- Main Script -->
+		<script src="js/main.js"></script>
+
+		<!-- aos Animations init -->
+		<script>
+			AOS.init();
+		</script>
+	</body>
+</html>
